@@ -32,3 +32,9 @@ figcaption { color: var(--muted); font-size: .9rem; line-height: 1.6; margin-top
 .skip-link:focus { top: 8px; }
 @media (max-width: 700px) { .container { padding: 32px 18px 56px; } body { font-size: 16px; } section { padding: 30px 0; } .comparison-grid { grid-template-columns: 1fr; } nav { gap: 8px 20px; } }
 @media print { body { background: white; font-size: 11pt; } .container { max-width: none; padding: 0; } nav, .skip-link { display: none; } h2, h3, h4 { break-after: avoid; } figure { break-inside: avoid; } a { color: inherit; } }
+
+/* Extra Credit benchmark table. */
+#extra-credit .ec-table { overflow-x: auto; margin: 24px 0; }
+#extra-credit table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+#extra-credit th, #extra-credit td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+#extra-credit th { background: #edf1f4; font-weight: 600; }
