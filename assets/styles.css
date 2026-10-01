@@ -38,3 +38,17 @@ figcaption { color: var(--muted); font-size: .9rem; line-height: 1.6; margin-top
 #extra-credit table { width: 100%; border-collapse: collapse; font-size: .9rem; }
 #extra-credit th, #extra-credit td { padding: 10px 14px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
 #extra-credit th { background: #edf1f4; font-weight: 600; }
+
+/* Keep required comparisons and timing evidence together when printing. */
+.task2-comparison { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.task2-comparison, .performance-block { break-inside: avoid; page-break-inside: avoid; }
+@media print {
+  .task2-comparison { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .task2-comparison figure { margin: 12px 0; }
+  .task2-comparison figcaption { font-size: 9pt; line-height: 1.4; }
+  .performance-block { font-size: 10pt; line-height: 1.5; }
+  .performance-block h4 { margin-top: 16px; }
+  #extra-credit .performance-block .ec-table { margin: 14px 0; overflow: visible; }
+  #extra-credit .performance-block table { font-size: 10pt; }
+  #extra-credit .performance-block th, #extra-credit .performance-block td { padding: 6px 10px; }
+}
